@@ -1,0 +1,191 @@
+/* Business Lottie Animations Container */
+.business-lottie-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Main Lottie Animation */
+.main-lottie-animation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.7;
+  z-index: 1;
+}
+
+/* Business Icons Grid */
+.business-icons-grid {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.business-lottie-icon {
+  position: absolute;
+  font-size: 2.5rem;
+  opacity: 0.6;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+  z-index: 2;
+}
+
+.chart-growth {
+  top: 15%;
+  right: 20%;
+}
+
+.business-case {
+  top: 25%;
+  left: 15%;
+}
+
+.target-achievement {
+  bottom: 35%;
+  right: 10%;
+}
+
+.revenue-growth {
+  bottom: 25%;
+  left: 10%;
+}
+
+.analytics-chart {
+  top: 40%;
+  right: 5%;
+}
+
+.business-launch {
+  top: 60%;
+  left: 8%;
+}
+
+/* Floating Data Points */
+.floating-data-points {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.data-point {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: linear-gradient(45deg, #3b82f6, #1d4ed8);
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.6);
+}
+
+/* Success Metrics */
+.success-metrics {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+  z-index: 2;
+}
+
+.metric-indicator {
+  font-size: 1.5rem;
+  opacity: 0.7;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.1));
+}
+
+/* Animation Enhancements */
+.business-lottie-icon:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-lottie-animation {
+    transform: translate(-50%, -50%) scale(0.7);
+    opacity: 0.5;
+  }
+  
+  .business-lottie-icon {
+    font-size: 2rem;
+    opacity: 0.4;
+  }
+  
+  .chart-growth {
+    top: 10%;
+    right: 5%;
+  }
+  
+  .business-case {
+    top: 20%;
+    left: 5%;
+  }
+  
+  .target-achievement {
+    bottom: 30%;
+    right: 5%;
+  }
+  
+  .revenue-growth {
+    bottom: 20%;
+    left: 5%;
+  }
+  
+  .analytics-chart {
+    top: 35%;
+    right: 2%;
+  }
+  
+  .business-launch {
+    top: 55%;
+    left: 3%;
+  }
+
+  .data-point {
+    width: 4px;
+    height: 4px;
+  }
+
+  .success-metrics {
+    transform: translateX(-50%) scale(0.8);
+  }
+
+  .metric-indicator {
+    font-size: 1.2rem;
+  }
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .main-lottie-animation {
+    transform: translate(-50%, -50%) scale(0.85);
+    opacity: 0.6;
+  }
+  
+  .business-lottie-icon {
+    font-size: 2.2rem;
+    opacity: 0.5;
+  }
+  
+  .success-metrics {
+    transform: translateX(-50%) scale(0.9);
+  }
+}
+
+/* Performance Optimization */
+.business-lottie-container * {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Smooth transitions */
+.business-lottie-icon,
+.metric-indicator {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
